@@ -8,7 +8,7 @@ import Testimonials from "./components/Testimonials";
 
 const Home: NextPage = () => {
   return (
-    <main className="bg-red-500">
+    <main className="bg-blue-100">
       <Header />
       <Hero />
       <Counter />
