@@ -67,9 +67,9 @@ export default function Pagos() {
   return (
     <main className=" min-h-screen">
       <Link href="/">
-        <div className="flex items-center w-32 hover:text-blue-100 p-4">
+        <div className="flex items-center w-32 hover:text-blue-100 p-4 hover:cursor-pointer ">
           <AiFillCaretLeft />
-          <span className="text-bold font-poppins text-md md:text-xl hover:cursor-pointer ">
+          <span className="text-bold font-poppins text-md md:text-xl ">
             Volver
           </span>
         </div>
