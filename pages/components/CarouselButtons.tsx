@@ -29,3 +29,6 @@ export function NextButton({ enabled, onClick }: Props) {
     </button>
   );
 }
+export default function Buttons() {
+  return <button>asd</button>;
+}
