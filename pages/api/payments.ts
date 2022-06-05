@@ -48,9 +48,6 @@ export default async function handler(
     console.error(e);
     return res.status(500).json({
       msg: "Internal server error",
-      variables: {
-        g2: process.env.GOOGLE_PRIVATE_KEY,
-      },
       data: e,
     });
   }

@@ -3,6 +3,8 @@ import React from "react";
 import Swal from "sweetalert2";
 import zelle from "../assets/zelle.png";
 import paypal from "../assets/paypal.png";
+import Link from "next/link";
+import { AiFillCaretLeft } from "react-icons/ai";
 
 type Service = "paypal" | "zelle";
 
@@ -64,7 +66,15 @@ export default function Pagos() {
 
   return (
     <main className=" min-h-screen">
-      <section className="max-w-5xl gap-4 mx-auto py-16 flex flex-col md:flex-row justify-between ">
+      <Link href="/">
+        <div className="flex items-center w-32 hover:text-blue-100 p-4">
+          <AiFillCaretLeft />
+          <span className="text-bold font-poppins text-md md:text-xl hover:cursor-pointer ">
+            Volver
+          </span>
+        </div>
+      </Link>
+      <section className="max-w-5xl gap-4 mx-auto py-12 flex flex-col md:flex-row justify-between ">
         <div className="w-full md:w-1/2">
           <article className="px-4 w-full">
             <h2 className="font-poppins text-bold text-3xl ">Medios de pago</h2>
