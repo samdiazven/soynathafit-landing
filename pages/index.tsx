@@ -1,12 +1,12 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Asks from "./components/Asks";
-import Carousel from "./components/Carousel";
-import Counter from "./components/Counter";
-import Footer from "./components/Footer";
-import Hero from "./components/Hero";
-import Testimonials from "./components/Testimonials";
-import Video from "./components/Video";
+import Asks from "../components/Ask";
+import Carousel from "../components/Carousel";
+import Counter from "../components/Counter";
+import Footer from "../components/Footer";
+import Hero from "../components/Hero";
+import Testimonials from "../components/Testimonials";
+import Video from "../components/Video";
 
 const Home: NextPage = () => {
   return (

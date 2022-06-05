@@ -1,9 +1,9 @@
 import React from "react";
-import whatsapp from "../../assets/whatsapp.png";
-import facebook from "../../assets/facebook.png";
-import instagram from "../../assets/instagram.png";
-import youtube from "../../assets/youtube.png";
-import tiktok from "../../assets/tiktok.png";
+import whatsapp from "../assets/whatsapp.png";
+import facebook from "../assets/facebook.png";
+import instagram from "../assets/instagram.png";
+import youtube from "../assets/youtube.png";
+import tiktok from "../assets/tiktok.png";
 import Image from "next/image";
 import Link from "next/link";
 

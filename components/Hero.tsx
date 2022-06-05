@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import hero from "../../assets/WEB-PNG_Mesa de trabajo 1.png";
-import bag from "../../assets/WEB-PNG-12.png";
+import hero from "../assets/WEB-PNG_Mesa de trabajo 1.png";
+import bag from "../assets/WEB-PNG-12.png";
 import Link from "next/link";
 
 function Hero() {

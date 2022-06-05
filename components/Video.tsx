@@ -2,6 +2,7 @@ import React from "react";
 import ReactPlayer from "react-player/youtube";
 export default function Video() {
   let [isMounted, setIsMounted] = React.useState(false);
+  let URL = "https://www.youtube.com/watch?v=sUwD3GRPJos";
   React.useEffect(() => {
     setIsMounted(true);
   }, []);
@@ -10,7 +11,7 @@ export default function Video() {
       {isMounted && (
         <ReactPlayer
           width={2000}
-          url="https://www.youtube.com/watch?v=YNRMOYtVRcE&list=RDwo7PBOCie9w&index=10"
+          url={URL}
           style={{ maxWidth: "100%" }}
           controls
           stopOnUnmount

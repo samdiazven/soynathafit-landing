@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import before from "../../assets/WEB-PNG-13.png";
-import after from "../../assets/WEB-PNG-14.png";
+import before from "../assets/WEB-PNG-13.png";
+import after from "../assets/WEB-PNG-14.png";
 
 function Testimonial() {
   return (
