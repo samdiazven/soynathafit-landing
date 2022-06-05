@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import hero from "../../assets/WEB-PNG_Mesa de trabajo 1.png";
 import bag from "../../assets/WEB-PNG-12.png";
+import Link from "next/link";
 
 function Hero() {
   return (
@@ -9,13 +10,15 @@ function Hero() {
       <figure className="w-full">
         <Image src={hero} alt="Hero" layout="fill" />
       </figure>
-      <figure className="absolute top-2 right-4 w-10 h-10 md:h-12 md:w-12">
-        <Image
-          src={bag}
-          alt="bag"
-          layout="intrinsic"
-          className="absolute top-0 right-0"
-        />
+      <figure className="absolute top-2 right-4 w-10 h-10 md:h-12 md:w-12 hover:cursor-pointer">
+        <Link href="pagos">
+          <Image
+            src={bag}
+            alt="bag"
+            layout="intrinsic"
+            className="absolute top-0 right-0"
+          />
+        </Link>
       </figure>
     </section>
   );
