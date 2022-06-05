@@ -1,7 +1,7 @@
 import React, { useState, useCallback, useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Image from "next/image";
-import { mediaByIndex } from "../../utils/mediaIndex";
+import { mediaByIndex } from "../utils/mediaIndex";
 import { NextButton, PrevButton } from "./CarouselButtons";
 
 export default function Carousel() {
