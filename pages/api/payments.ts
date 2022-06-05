@@ -40,7 +40,15 @@ export default async function handler(
         ],
       },
     });
-    return res.status(200).json({ msg: "OK", data: response.data });
+    return res.status(200).json({
+      msg: "OK",
+      data: response.data,
+      variables: {
+        g1: process.env.GOOGLE_CLIENT_EMAIL,
+        g2: process.env.GOOGLE_PRIVATE_KEY,
+        g3: process.env.GOOGLE_SHEET_ID,
+      },
+    });
   } catch (e) {
     console.error(e);
     return res.status(500).json({ msg: "Internal server error", data: e });
