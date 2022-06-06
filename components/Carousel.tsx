@@ -45,7 +45,7 @@ export default function Carousel() {
                   <Image
                     src={mediaByIndex(index)}
                     alt="carousel image."
-                    height={350}
+                    height={window.innerWidth >= 768 ? 400 : 250}
                     width={window ? window.innerWidth : 1200}
                     layout="fixed"
                     objectFit="contain"
