@@ -6,10 +6,8 @@ import Link from "next/link";
 
 function Hero() {
   return (
-    <section className="relative h-40 md:h-96 flex flex-col ">
-      <figure className="w-full">
-        <Image src={hero} alt="Hero" layout="fill" />
-      </figure>
+    <section className="relative h-56 md:h-96 flex flex-col ">
+      <Image src={hero} alt="Hero" layout="fill" />
       <figure className="absolute top-2 right-4 w-10 h-10 md:h-12 md:w-12 hover:cursor-pointer">
         <Link href="pagos">
           <Image

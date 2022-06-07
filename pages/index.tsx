@@ -13,6 +13,7 @@ const Home: NextPage = () => {
     <>
       <Head>
         <title>RETO MASIVO-Soynathafit</title>
+        <meta name="description" content="Soynathafit" />
       </Head>
       <main className="flex flex-col h-full">
         <Hero />

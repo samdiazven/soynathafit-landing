@@ -30,8 +30,8 @@ function Counter() {
     millisecondsOfSecond,
   ]);
   return (
-    <section className="bg-blue-200  rounded-br-3xl rounded-bl-3xl">
-      <article className="h-4 md:h-8  bg-green-200">
+    <section className="bg-blue-200 -mt-12 z-50 rounded-br-3xl rounded-bl-3xl">
+      <article className="h-4 md:h-8 bg-green-200">
         <h3 className="text-center text-xs md:text-2xl font-poppins text-bold uppercase text-white">
           Fecha de inicio del reto masivo: 30 de junio de 2022
         </h3>
