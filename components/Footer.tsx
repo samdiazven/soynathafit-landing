@@ -25,25 +25,13 @@ function Footer() {
         </figure>
 
         <figure className=" hover:cursor-pointer">
-          <Link href="https://wa.me/56988888888">
+          <Link href="https://www.facebook.com/Soynathafit-111632584482475/">
             <Image src={facebook} alt="facebook" />
           </Link>
         </figure>
         <figure className=" hover:cursor-pointer">
-          <Link href="https://wa.me/56988888888">
+          <Link href="https://www.instagram.com/soynathafit">
             <Image src={instagram} alt="instagram" />
-          </Link>
-        </figure>
-
-        <figure className="hover:cursor-pointer">
-          <Link href="https://wa.me/56988888888">
-            <Image src={youtube} alt="youtube" />
-          </Link>
-        </figure>
-
-        <figure className=" hover:cursor-pointer">
-          <Link href="https://wa.me/56988888888">
-            <Image src={tiktok} alt="tiktok" />
           </Link>
         </figure>
       </div>
