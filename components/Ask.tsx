@@ -1,5 +1,5 @@
 import React from "react";
-import { AiFillCaretDown } from "react-icons/ai";
+import { AiFillCaretDown, AiFillCaretUp } from "react-icons/ai";
 
 function Asks() {
   let [isOpen, setIsOpen] = React.useState(false);
@@ -13,7 +13,7 @@ function Asks() {
           preguntas frecuentes
         </span>
         <span className="ml-4 ">
-          <AiFillCaretDown />
+          {isOpen ? <AiFillCaretUp /> : <AiFillCaretDown />}
         </span>
       </p>
       {isOpen && (

@@ -20,23 +20,41 @@ function Footer() {
       <div className="flex">
         <figure className="  hover:cursor-pointer">
           <Link href="https://wa.me/56988888888">
-            <Image src={whatsapp} alt="whatsapp" />
+            <Image
+              src={whatsapp}
+              alt="whatsapp"
+              height={100}
+              width={100}
+              objectFit="contain"
+            />
           </Link>
         </figure>
 
         <figure className=" hover:cursor-pointer">
           <Link href="https://www.facebook.com/Soynathafit-111632584482475/">
-            <Image src={facebook} alt="facebook" />
+            <Image
+              height={100}
+              width={100}
+              objectFit="contain"
+              src={facebook}
+              alt="facebook"
+            />
           </Link>
         </figure>
         <figure className=" hover:cursor-pointer">
           <Link href="https://www.instagram.com/soynathafit">
-            <Image src={instagram} alt="instagram" />
+            <Image
+              height={100}
+              width={100}
+              objectFit="contain"
+              src={instagram}
+              alt="instagram"
+            />
           </Link>
         </figure>
       </div>
       <div className="border-t-2 w-full mt-4">
-        <p className="text-right text-sm font-semibold text-gray-400 mr-2 ">
+        <p className="text-right  text-xs font-semibold text-gray-400 mr-2 ">
           Desarrollado por Samuel D&iacute;az
         </p>
       </div>
