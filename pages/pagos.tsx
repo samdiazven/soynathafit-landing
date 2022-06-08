@@ -122,7 +122,7 @@ export default function Pagos() {
                     </span>
 
                     <span className="font-poppins text-bold">
-                      Titular: <em>Nathaly D&acute;az</em>
+                      Titular: <em>Nathaly D&iacute;az</em>
                     </span>
                   </p>
                 </div>
