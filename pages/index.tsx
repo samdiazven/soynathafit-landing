@@ -7,6 +7,7 @@ import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import Testimonials from "../components/Testimonials";
 import Video from "../components/Video";
+import FacebookPixel from "../facebook/pixel-1";
 
 const Home: NextPage = () => {
   return (
@@ -14,6 +15,11 @@ const Home: NextPage = () => {
       <Head>
         <title>RETO MASIVO-Soynathafit</title>
         <meta name="description" content="Soynathafit" />
+        <meta
+          name="facebook-domain-verification"
+          content="tedwccl0q87g6b3p9g1nta4dboiztk"
+        />
+        <FacebookPixel />
       </Head>
       <main className="flex flex-col h-full">
         <Hero />
