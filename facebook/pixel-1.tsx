@@ -5,8 +5,7 @@ const FacebookPixel = () => {
     <React.Fragment>
       <script
         dangerouslySetInnerHTML={{
-          __html: `
- !function(f,b,e,v,n,t,s)
+          __html: `!function(f,b,e,v,n,t,s)
   {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
   n.callMethod.apply(n,arguments):n.queue.push(arguments)};
   if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
@@ -20,14 +19,11 @@ const FacebookPixel = () => {
       />
       <noscript
         dangerouslySetInnerHTML={{
-          __html: `
-      <img
+          __html: `<img
         height="1"
         width="1"
         style="display:none"
-        src="https://www.facebook.com/tr?id=1871896253009626&ev=PageView&noscript=1"
-      />
-      `,
+        src="https://www.facebook.com/tr?id=1871896253009626&ev=PageView&noscript=1" />`,
         }}
       />
     </React.Fragment>
