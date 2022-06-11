@@ -8,7 +8,7 @@ export default function Video() {
     setIsMounted(true);
   }, []);
   return (
-    <section className="flex my-2 rounded-lg  w-full  self-center flex-col md:flex-row justify-center items-center ">
+    <section className="flex my-1 rounded-lg  w-full  self-center flex-col md:flex-row justify-center items-center ">
       {isMounted && (
         <ReactPlayer
           url={URL}
