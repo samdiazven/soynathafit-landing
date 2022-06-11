@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import hero from "../assets/banner.png";
+import hero from "../assets/bannerweb.jpg";
 import bag from "../assets/WEB-PNG-12.png";
 import Link from "next/link";
 

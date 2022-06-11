@@ -1,4 +1,4 @@
-import img1 from "../assets/carousel.png";
+import img1 from "../assets/bannerweb-equipo-1.jpg";
 import img2 from "../assets/carousel.png";
 import img3 from "../assets/carousel.png";
 import img4 from "../assets/carousel.png";
