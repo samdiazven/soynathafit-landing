@@ -5,7 +5,7 @@ function Asks() {
   let [isOpen, setIsOpen] = React.useState(false);
   return (
     <section
-      className="w-full bg-green-100 hover:border-green-200 hover:cursor-pointer"
+      className="w-full rounded-lg bg-green-100 hover:border-green-200 hover:cursor-pointer"
       onClick={() => setIsOpen(!isOpen)}
     >
       <p className="flex  items-center p-4 ml-8 text-sm  md:text-xl text-white text-poppins font-bold uppercase">

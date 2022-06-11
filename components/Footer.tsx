@@ -17,14 +17,14 @@ function Footer() {
           </p>
         </div>
       </Link>
-      <div className="flex">
+      <div className="flex justify-center">
         <figure className="  hover:cursor-pointer">
           <Link href="https://wa.me/56988888888">
             <Image
               src={whatsapp}
               alt="whatsapp"
-              height={100}
-              width={100}
+              height={80}
+              width={80}
               objectFit="contain"
             />
           </Link>
@@ -33,8 +33,8 @@ function Footer() {
         <figure className=" hover:cursor-pointer">
           <Link href="https://www.facebook.com/Soynathafit-111632584482475/">
             <Image
-              height={100}
-              width={100}
+              height={80}
+              width={80}
               objectFit="contain"
               src={facebook}
               alt="facebook"
@@ -44,8 +44,8 @@ function Footer() {
         <figure className=" hover:cursor-pointer">
           <Link href="https://www.instagram.com/soynathafit">
             <Image
-              height={100}
-              width={100}
+              height={80}
+              width={80}
               objectFit="contain"
               src={instagram}
               alt="instagram"

@@ -16,10 +16,23 @@ function Testimonial({
     <article className="flex flex-col max-w-md items-center my-4">
       <div className="flex items-center gap-2 md:gap-1">
         <figure>
-          <Image src={before} alt="antes" />
+          <Image
+            className="rounded-lg"
+            src={before}
+            alt="antes"
+            objectFit="contain"
+            width={1000}
+            height={1000}
+          />
         </figure>
         <figure>
-          <Image src={after} alt="despues" />
+          <Image
+            className="rounded-lg"
+            width={1000}
+            height={1000}
+            src={after}
+            alt="despues"
+          />
         </figure>
       </div>
       <p className="text-poppins font-semibold  px-4">

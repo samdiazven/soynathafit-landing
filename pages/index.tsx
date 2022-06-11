@@ -21,14 +21,16 @@ const Home: NextPage = () => {
         />
         <FacebookPixel />
       </Head>
-      <main className="flex flex-col h-full">
-        <Hero />
-        <Counter />
-        <Video />
-        <Carousel />
-        <Testimonials />
-        <Asks />
-        <Footer />
+      <main className="bg-gradient-to-br from-blue-200 via-blue-100 to-slate-50">
+        <div className="flex max-w-6xl  m-auto flex-col h-full">
+          <Hero />
+          <Counter />
+          <Video />
+          <Carousel />
+          <Testimonials />
+          <Asks />
+          <Footer />
+        </div>
       </main>
     </>
   );
