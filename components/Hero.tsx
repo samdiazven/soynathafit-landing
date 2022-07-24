@@ -7,7 +7,7 @@ function Hero() {
   const navigate = useRouter();
 
   return (
-    <section className="h-96 w-full flex flex-col relative mb-4 ">
+    <section className="h-96 w-full flex flex-col relative ">
       <Image
         src={hero}
         layout="responsive"
