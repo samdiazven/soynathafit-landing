@@ -1,23 +1,27 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 import React from "react";
-import hero from "../assets/bannerweb-1060.jpg";
-import bag from "../assets/WEB-PNG-12.png";
-import Link from "next/link";
+import hero from "../assets/banner-img.jpg";
 
 function Hero() {
+  const navigate = useRouter();
+
   return (
-    <section className="relative h-56 md:h-96 flex flex-col ">
-      <Image src={hero} alt="Hero" layout="fill" priority />
-      <figure className="absolute top-2 right-4 w-10 h-10 md:h-12 md:w-12 hover:cursor-pointer">
-        <Link href="pagos" className="p-8 flex justify-center align-center">
-          <Image
-            src={bag}
-            alt="bag"
-            layout="intrinsic"
-            className="absolute top-0 right-0 bg-blue-200 rounded-full "
-          />
-        </Link>
-      </figure>
+    <section className="h-96 w-full flex flex-col relative mb-4 ">
+      <Image
+        src={hero}
+        layout="responsive"
+        alt="Hero"
+        priority
+        height={"100%"}
+        width={"100%"}
+      />
+      <button
+        onClick={() => navigate.push("/pagos")}
+        className="p-1 w-64 bg-[#023C49] text-xl font-extrabold -mt-12 z-50 mx-auto text-bold font-poppins text-slate-50 rounded-xl "
+      >
+        COMPRA AHORA
+      </button>
     </section>
   );
 }

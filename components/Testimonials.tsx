@@ -1,12 +1,12 @@
 import Image, { StaticImageData } from "next/image";
 import React from "react";
-import image1 from "../assets/antes-despues.jpg";
-import image2 from "../assets/antes-despues-1.jpg";
-import image3 from "../assets/antes-despues-2.jpg";
+import image1 from "../assets/before1.png";
+import image2 from "../assets/before2.png";
+import image3 from "../assets/before3.png";
 
 function Testimonial({ image }: { image: StaticImageData }) {
   return (
-    <article className="flex flex-col items-center">
+    <article className=" py-2 self-center">
       <Image
         className="rounded-lg"
         src={image}
@@ -15,18 +15,13 @@ function Testimonial({ image }: { image: StaticImageData }) {
         width={400}
         height={400}
       />
-      <p className="text-poppins font-semibold px-4 mb-8 -mt-2">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quidem
-        voluptas sunt doloremque vel quis eius eos. Odio nisi quibusdam eos!
-        Sunt exercitationem, error unde fuga voluptas eos temporibus voluptatum.
-      </p>
     </article>
   );
 }
 
 function Testimonials() {
   return (
-    <section className="grid md:gap-2 grid-cols-1 md:grid-cols-3  ">
+    <section className="grid md:gap-2 grid-cols-2 gap-1 place-items-center md:grid-cols-3  bg-blue-500 ">
       <Testimonial image={image1} />
       <Testimonial image={image2} />
       <Testimonial image={image3} />
