@@ -5,7 +5,7 @@ function Counter() {
   let [hours, setHours] = React.useState(0);
   let [days, setDays] = React.useState(0);
 
-  let intervalDate = new Date("08/15/2022").getTime() - new Date().getTime();
+  let intervalDate = new Date("08/25/2022").getTime() - new Date().getTime();
   let millisecondsOfSecond = 1000;
   let millisecondsOfMinute = millisecondsOfSecond * 60;
   let millisecondsOfHour = millisecondsOfMinute * 60;
