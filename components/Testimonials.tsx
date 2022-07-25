@@ -6,7 +6,7 @@ import image3 from "../assets/before3.png";
 
 function Testimonials() {
   return (
-    <section className="w-full bg-blue-500 flex flex-col md:flex-row items-center">
+    <section className="w-full justify-center md:gap-4 bg-blue-500 flex flex-col md:flex-row items-center">
       <article className="py-2 flex justify-center items-center">
         <Image src={image1} alt="antes" objectFit="contain" />
       </article>
