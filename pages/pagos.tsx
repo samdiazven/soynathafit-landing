@@ -103,7 +103,7 @@ export default function Pagos() {
                       Nro. de Tel&eacute;fono: <em>407 985 9084</em>
                     </span>
                     <span className="font-poppins text-bold">
-                      Titular: <em>Andrea Aldea</em>
+                      Titular: <em>Nathaly Diaz</em>
                     </span>
                   </p>
                 </div>

@@ -30,8 +30,8 @@ function Counter() {
     millisecondsOfSecond,
   ]);
   return (
-    <section className="mb-2 z-50 rounded-br-3xl rounded-bl-3xl">
-      <article className="flex gap-8 p-2 items-center justify-center">
+    <section>
+      <article className="flex mt-4 gap-8 p-2 items-center justify-center">
         <p className="flex flex-col">
           <span className="font-poppins font-bold text-5xl md:text-6xl text-[#0EC5DC]">
             {days}
