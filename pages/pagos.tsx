@@ -12,18 +12,12 @@ type Service = "paypal" | "zelle";
 export default function Pagos() {
   let [name, setName] = React.useState("");
   let [email, setEmail] = React.useState("");
-  let [lastname, setLastname] = React.useState("");
-  let [movement, setMovement] = React.useState("");
-  let [service, setService] = React.useState<Service>("zelle");
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = {
       name,
       email,
-      lastname,
-      movement,
-      service,
     };
     if (Object.values(form).includes("")) {
       Swal.fire({
@@ -34,35 +28,33 @@ export default function Pagos() {
       });
       return;
     }
-    try {
-      let response = await fetch("/api/payments", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify(form),
-      });
-      let json = await response.json();
+    let response = await fetch("/api/mail", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(form),
+    });
+
+    if (response.status === 200) {
       Swal.fire({
         title: "¡Gracias!",
         text: "Te contactaremos a la brevedad, por favor mantente al tanto de la bandeja de tu correo.",
         icon: "success",
         confirmButtonText: "Cerrar",
       });
-    } catch (e) {
+    } else {
       Swal.fire({
         title: "¡Error!",
         text: "Por favor intenta de nuevo.",
         icon: "error",
         confirmButtonText: "Cerrar",
       });
-    } finally {
-      setEmail("");
-      setName("");
-      setLastname("");
-      setMovement("");
     }
+
+    setName("");
+    setEmail("");
   }
 
   return (
@@ -147,24 +139,8 @@ export default function Pagos() {
                 placeholder="Ingresa tus nombres"
               />
             </div>
-
             <div className="flex items-center justify-center ">
-              <label htmlFor="lastname" className="sr-only">
-                Apellidos
-              </label>
-              <input
-                value={lastname}
-                onChange={(e) => setLastname(e.target.value)}
-                type="text"
-                id="lastname"
-                name="lastname"
-                className="shadow-md focus:ring-green-200 p-4 focus:border-green-200 block w-72 md:w-96 rounded-md sm:text-md "
-                placeholder="Ingresa tus apellidos"
-              />
-            </div>
-
-            <div className="flex items-center justify-center ">
-              <label htmlFor="email" className="sr-only">
+              <label htmlFor="email" className="sr-only ">
                 Email
               </label>
               <input
@@ -174,38 +150,8 @@ export default function Pagos() {
                 id="email"
                 name="email"
                 className="shadow-md focus:ring-green-200 p-4 focus:border-green-200 block w-72 md:w-96 rounded-md sm:text-md "
-                placeholder="Ingresa tu correo electronico"
+                placeholder="Ingresa tu correo"
               />
-            </div>
-            <div className="flex items-center justify-center ">
-              <label htmlFor="services" className="sr-only">
-                Servicio
-              </label>
-              <select
-                value={service}
-                onChange={(e) => setService(e.target.value as Service)}
-                name="services"
-                className="shadow-md focus:ring-green-200 p-4 focus:border-green-200 block w-72 md:w-96 rounded-md sm:text-md "
-                id="services"
-                placeholder="Selecciona un servicio"
-              >
-                <option value="zelle">Zelle</option>
-                <option value="paypal">Paypal</option>
-              </select>
-            </div>
-
-            <div className="flex items-center justify-center ">
-              <label htmlFor="movement" className="sr-only">
-                Numero de movimiento
-              </label>
-              <textarea
-                value={movement}
-                onChange={(e) => setMovement(e.target.value)}
-                id="movement"
-                name="movement"
-                className="shadow-md focus:ring-green-200 p-4 focus:border-green-200 block w-72 md:w-96 rounded-md sm:text-md "
-                placeholder="Ingresa tu numero de movimiento"
-              ></textarea>
             </div>
             <div className="flex items-center justify-center ">
               <button
