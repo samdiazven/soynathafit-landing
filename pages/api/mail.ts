@@ -56,11 +56,12 @@ export default async function handler(
     transporter.sendMail(mailData, (err: Error, info: string) => {
       if (err) {
         console.error(err);
-        return res.status(400).json({
+         res.status(400).json({
           msg: err,
         });
+        return
       }
-      return res.status(200).end();
+       res.status(200).json({});
     });
     // })
   } catch (e) {

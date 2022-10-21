@@ -6,56 +6,9 @@ import paypal from "../assets/paypal.png";
 import Link from "next/link";
 import { AiFillCaretLeft } from "react-icons/ai";
 import Head from "next/head";
-
-type Service = "paypal" | "zelle";
+import CheckoutForm from "../components/CheckoutForm";
 
 export default function Pagos() {
-  let [name, setName] = React.useState("");
-  let [email, setEmail] = React.useState("");
-
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    const form = {
-      name,
-      email,
-    };
-    if (Object.values(form).includes("")) {
-      Swal.fire({
-        title: "Revisa tus datos",
-        text: "Todos los campos son obligatorios",
-        icon: "warning",
-        confirmButtonText: "Ok",
-      });
-      return;
-    }
-    let response = await fetch("/api/mail", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify(form),
-    });
-
-    if (response.status === 200) {
-      Swal.fire({
-        title: "¡Gracias!",
-        text: "Te contactaremos a la brevedad, por favor mantente al tanto de la bandeja de tu correo.",
-        icon: "success",
-        confirmButtonText: "Cerrar",
-      });
-    } else {
-      Swal.fire({
-        title: "¡Error!",
-        text: "Por favor intenta de nuevo.",
-        icon: "error",
-        confirmButtonText: "Cerrar",
-      });
-    }
-
-    setName("");
-    setEmail("");
-  }
 
   return (
     <>
@@ -121,47 +74,7 @@ export default function Pagos() {
               </div>
             </article>
           </div>
-          <form className="py-4 space-y-4" onSubmit={handleSubmit}>
-            <h3 className=" text-center text-xl text-bold font-poppins">
-              Ingresa los datos de tu pago
-            </h3>
-            <div className="flex items-center justify-center ">
-              <label htmlFor="name" className="sr-only ">
-                Nombres
-              </label>
-              <input
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                type="text"
-                id="name"
-                name="name"
-                className="shadow-md focus:ring-green-200 p-4 focus:border-green-200 block w-72 md:w-96 rounded-md sm:text-md "
-                placeholder="Ingresa tus nombres"
-              />
-            </div>
-            <div className="flex items-center justify-center ">
-              <label htmlFor="email" className="sr-only ">
-                Email
-              </label>
-              <input
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                type="email"
-                id="email"
-                name="email"
-                className="shadow-md focus:ring-green-200 p-4 focus:border-green-200 block w-72 md:w-96 rounded-md sm:text-md "
-                placeholder="Ingresa tu correo"
-              />
-            </div>
-            <div className="flex items-center justify-center ">
-              <button
-                type="submit"
-                className="p-4 w-72 md:w-96 rounded-md bg-green-100 hover:bg-green-200 text-white text-bold text-xl uppercase sm:text-sm"
-              >
-                Enviar
-              </button>
-            </div>
-          </form>
+          <CheckoutForm />
         </section>
       </main>
     </>
